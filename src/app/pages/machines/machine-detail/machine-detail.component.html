@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>Machine One</nb-card-header>
+      <nb-card-body>
+        <form class="form-horizontal">
+          <div class="form-group row">
+            <label class="label col-sm-3 form-control-label">Raw Material</label>
+            <div class="col-sm-9"> {{rawMaterial}} </div>
+          </div>
+          <div class="form-group row">
+            <label class="label col-sm-3 form-control-label">Raw Material</label>
+            <div class="col-sm-3"> {{remainingQuantity}} </div>
+            <button type="submit" (click)="getRemainingQuantity()" nbButton status="warning">Get From Machine</button>
+          </div>
+          <div class="form-group row">
+            <label class="label col-sm-3 form-control-label">Inventory</label>
+            <div class="col-sm-3"> {{inventory}} </div>
+            <button type="submit" (click)="getInventory()" nbButton status="warning">Get From Inventory</button>
+          </div>
+          <div class="form-group row">
+            <label class="label col-sm-3 form-control-label">Expected Delivery</label>
+            <div class="col-sm-3"> {{expectedDelivery | date:'dd/MM/yy'}} </div>
+            <button type="submit" (click)="getOrder()" nbButton status="warning">Get From Orderstate</button>
+          </div>
+          <div class="form-group row">
+            <label class="label col-sm-3 form-control-label">Usual Expected Delivery</label>
+            <div class="col-sm-9"> {{usualExpectedDelivery| date:'dd/MM/yy'}} </div>
+          </div>
+          <div class="form-group row">
+            <label class="label col-sm-3 form-control-label">Suggested Order Time</label>
+            <div class="col-sm-9"> {{suggesterOrderTime| date:'dd/MM/yy'}} </div>
+          </div>
+          <div class="form-group row">
+            <label class="label col-sm-3 form-control-label">Suggested Order Time</label>
+            <div class="col-sm-9"> {{testData}} </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-9">
+              <button type="submit" (click)="getOrder()" nbButton status="warning">Order Now</button>
+            </div>
+          </div>
+        </form>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
